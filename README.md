@@ -1,26 +1,25 @@
 # zeiss_test
-zeiss_test
+This repository contains a Python script that uses the Selenium library to automate browsing on the website https://www.zeiss.de/. To run the script, follow the steps below:
 
-To download and run this code, follow the instructions below:
+1) Clone the repository to your local machine or download and extract the zip file.
+2) Navigate to the directory where the repository is located using your command prompt or terminal.
+3) Create a virtual environment by running the following command:
+'python -m venv env'
 
-1. Clone the repository to your local machine by running the following command in your terminal or command prompt: 
-git clone https://github.com//.git
+4)Activate the virtual environment by running the following command:
+For Windows
+'.\env\Scripts\activate'
 
-2. Switch to the my_new_branch branch by running the following command: git checkout my_new_branch
+For Linux or macOS
+'source env/bin/activate'
 
-3. Install the required dependencies by running the following command: 
-pip install selenium webdriver_manager
+5) Install the required libraries using the following command:
+'pip install -r requirements.txt'
 
-4. Download and install the Chrome web driver for your system from the following link: 
-https://chromedriver.chromium.org/downloads
+6) Run the Python script using the following command:
+'python zeiss_selenium.py'
 
-5. Update the ChromeDriverManager().install() line in the code to specify the path to the Chrome web driver executable on your system: 
-service = Service('/path/to/chromedriver')
+7) The script will launch the Chrome browser and navigate to https://www.zeiss.de/. It will then accept cookies and click on the "Karriere" link to navigate to the careers page of the website.
 
-6. Save the changes to the code file.
-
-7. Run the code by running the following command: 
-python .py 
-Replace with the name of the file that contains the code.
-
-This should open the Zeiss website in a Chrome browser window, accept the cookie popup, click on the "Karriere" link, wait for 7 seconds, and then quit the browser.
+8) After waiting for 7 seconds, the browser will be closed automatically.
+Note: The code has been tested with Python 3.8.10 and may not work with other versions of Python.
