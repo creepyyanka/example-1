@@ -6,8 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import time
+import os
 
-service = Service(ChromeDriverManager().install())
+path_to_chrome_driver = os.environ.get('PATH_TO_CHROME_DRIVER', 'chromedriver')
+service = Service(path_to_chrome_driver)
 opts = webdriver.ChromeOptions()
 opts.add_argument("--window-size=800,600")
 driver = webdriver.Chrome(service=service, options=opts)
@@ -27,5 +29,4 @@ karriere_locator = (By.XPATH, "//a[@title='Karriere']")
 karriere_link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(karriere_locator))
 karriere_link.click()
 
-time.sleep(7)
 driver.quit()
