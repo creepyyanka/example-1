@@ -6,7 +6,7 @@ This repository contains a Python script that uses the Selenium library to autom
 3) Create a virtual environment by running the following command:
 'python -m venv env'
 
-4)Activate the virtual environment by running the following command:
+4) Activate the virtual environment by running the following command:
 For Windows
 '.\env\Scripts\activate'
 
@@ -19,7 +19,8 @@ For Linux or macOS
 6) Run the Python script using the following command:
 'python zeiss_selenium.py'
 
-7) The script will launch the Chrome browser and navigate to https://www.zeiss.de/. It will then accept cookies and click on the "Karriere" link to navigate to the careers page of the website.
+7) The script will launch the Chrome browser and navigate to https://www.zeiss.de/. 
+It will then accept cookies and click on the "Karriere" link to navigate to the careers page of the website.
 
 8) After waiting for 7 seconds, the browser will be closed automatically.
 Note: The code has been tested with Python 3.8.10 and may not work with other versions of Python.
