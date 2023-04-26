@@ -5,7 +5,6 @@ This repository contains a Python script that uses the Selenium library to autom
 2) Navigate to the directory where the repository is located using your command prompt or terminal.
 3) Create a virtual environment by running the following command:
 'python -m venv env'
-
 4) Activate the virtual environment by running the following command:
 For Windows
 '.\env\Scripts\activate'
