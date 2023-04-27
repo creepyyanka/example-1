@@ -8,11 +8,14 @@ from selenium.webdriver.chrome.service import Service
 import time
 import os
 
-path_to_chrome_driver = os.environ.get('PATH_TO_CHROME_DRIVER', 'chromedriver')
-service = Service(path_to_chrome_driver)
 opts = webdriver.ChromeOptions()
+opts.add_argument('--headless')
+opts.add_argument('--disable-gpu') 
+opts.add_argument('--no-sandbox')
+opts.add_argument('--disable-dev-shm-usage')
 opts.add_argument("--window-size=800,600")
-driver = webdriver.Chrome(service=service, options=opts)
+opts.add_argument("--remote-allow-origins=*")
+driver = webdriver.Chrome(options=opts)
 
 driver.get("https://www.zeiss.de/")
 
